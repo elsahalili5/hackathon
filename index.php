@@ -19,15 +19,10 @@
         </div>
 
         <div class="login">
-            <a href="login-signin.php">Login </a>
+            <a href="login-signin.php">Login</a>
             <span>|</span>
             <a href="login-signin.php">Register</a>
         </div>
-
-
-
-
-        <h6>HELLO</h6>
         <div class="navbar">
             <a href="view-products.html">HELLO</a>
             <div class="dropdown">
