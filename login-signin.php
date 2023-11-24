@@ -20,13 +20,13 @@
 				<?php endif; ?>
 				<h1>Create Account</h1>
 
-				<input type="text" name="name" placeholder="Name" />
-				<input type="text" name="surname" placeholder="Surname">
+				<input type="text" name="name" placeholder="Name" required />
+				<input type="text" name="surname" placeholder="Surname" required />
 
 
-				<input type="text" name="email" placeholder="Email" />
+				<input type="text" name="email" placeholder="Email" required />
 
-				<input type="password" name="password" placeholder="Password" />
+				<input type="password" name="password" placeholder="Password" required />
 
 				<input class="button" type="submit" name="submit" placeholder="Log in">
 			</form>
@@ -36,15 +36,9 @@
 		<div class="form-container sign-in-container">
 
 			<form action="loginlogic.php" method="POST">
-
 				<h1>Log in</h1>
-
-
-				<input type="text" name="email" placeholder="Email" />
-				<input type="password" name="password" placeholder="Password" />
-
-				<a href="#">Forgot your password?</a>
-
+				<input type="text" name="email" placeholder="Email" required />
+				<input type="password" name="password" placeholder="Password" required />
 				<input class="button" type="submit" name="submit">
 			</form>
 		</div>

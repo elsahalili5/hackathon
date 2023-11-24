@@ -3,3 +3,16 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #0b0b2d;
+}
+
+footer p {
+  font-size: 14px;
+  color: white;
+}
