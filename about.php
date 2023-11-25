@@ -14,7 +14,7 @@
     <div>
         <header>
             <div class="logo">
-                <h1>EcoFund</h1>
+                <h1>Eco Fund</h1>
             </div>
             <nav class="navbar">
                 <a href="./index.php">Home</a>

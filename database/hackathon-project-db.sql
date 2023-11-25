@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 24, 2023 at 06:08 PM
+-- Generation Time: Nov 25, 2023 at 10:39 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,6 +20,39 @@ SET time_zone = "+00:00";
 --
 -- Database: `hackathon-project-db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cause`
+--
+
+CREATE TABLE `cause` (
+  `id` int(30) NOT NULL,
+  `name` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cause`
+--
+
+INSERT INTO `cause` (`id`, `name`) VALUES
+(17, 'Ocean'),
+(18, 'Mountain');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Donations`
+--
+
+CREATE TABLE `Donations` (
+  `id` int(50) NOT NULL,
+  `name` int(50) NOT NULL,
+  `cause` varchar(50) NOT NULL,
+  `donation-date` date NOT NULL,
+  `paragraf` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -41,11 +74,24 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`, `user_type`) VALUES
-(1, 'elsa', 'halili', 'elsahalilii5@gmail.com', '123123', 'admin');
+(11, 'elsa', 'halili', 'elsahalilii5@gmail.com', '123123', 'admin'),
+(12, 'anjesa', 'gashi', 'anjesagashi6@gmail.com', '123123', 'user');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `cause`
+--
+ALTER TABLE `cause`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `Donations`
+--
+ALTER TABLE `Donations`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -58,10 +104,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `cause`
+--
+ALTER TABLE `cause`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `Donations`
+--
+ALTER TABLE `Donations`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

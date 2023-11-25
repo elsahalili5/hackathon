@@ -32,7 +32,7 @@
         </div>
 
         <div class="section-1-text">
-            <h6 class="title">TREE BLOOM</h6>
+            <h5 class="title">ECO FUND</h5>
 
             <div class="navbar">
                 <a href="about.php">ABOUT</a>
