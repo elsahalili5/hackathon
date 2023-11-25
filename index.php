@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,3 +60,7 @@
 
 </html>
 <script src="js/main-page.js"></script>
+
+<!-- edit user te dashboard -->
+<!-- add usertype -->
+<!-- profile -->

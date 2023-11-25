@@ -1,3 +1,6 @@
+<?php require('page-only-for-admin.php') ?>
+<?php require('is-private-page.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

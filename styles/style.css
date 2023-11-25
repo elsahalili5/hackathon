@@ -49,6 +49,7 @@ body {
 }
 
 .navbar a {
+  font-family: "Montserrat", sans-serif !important;
   float: left;
   font-size: 16px;
   color: #fff;
