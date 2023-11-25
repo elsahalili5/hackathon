@@ -4,58 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/about.css">
-
-
 </head>
 
-
 <body>
-    <div class="section-1">
-        <div class="video">
-            <video autoplay loop muted class="backgroundvideo">
-                <source src="videos/video1.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="login-wrapper">
-            <div>
-                <?php if ($_SESSION['name']) { ?>
-                    <p class="login-text welcome-text"><?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?></p>
-                    <a class="logout-btn" href="./logout.php">Logout</a>
-                <?php } else { ?>
-                    <a class="login-text" href="login-signin.php">Login or Register</a>
-                <?php } ?>
+    <div>
+        <header>
+            <div class="logo">
+                <h1>EcoFund</h1>
             </div>
-        </div>
-
-        <div class="section-1-text">
-            <h6 class="title">TREE BLOOM</h6>
-
-            <div class="navbar">
-                <a href="#">HELLO</a>
-                <div class="dropdown">
-                    <a href="#">HELLO</a>
-                </div>
-            </div>
-        </div>
-
-        <?php if ($_SESSION['user_type'] === 'admin') { ?>
-            <div class="admin-dashboard-btn">
-                <a href="admin-dashboard.php">Admin's Dashboard</a>
-            </div>
-        <?php }  ?>
-
+            <nav class="navbar">
+                <a href="./index.php">Home</a>
+                <a href="./donate.php">Donate</a>
+                <a href="./causes.php">Causes</a>
+            </nav>
+        </header>
+        <img src="https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
     </div>
-
-    <main>
-    </main>
-
     <footer>
         <p>Copyright Anjesa & Elsa</p>
     </footer>
 </body>
-
 
 </html>

@@ -54,7 +54,7 @@ try {
                             <tr>
                                 <th scope="row"><?= $cause['id'] ?></th>
                                 <td><?= $cause['name'] ?></td>
-                                <td> |
+                                <td>
                                     <a class="delete-btn" href="delete-cause.php?id=<?= $cause['id'] ?>"><ion-icon name="trash-outline"></ion-icon></a>
                                 </td>
                             </tr>
