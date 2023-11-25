@@ -35,10 +35,14 @@
             <h6 class="title">TREE BLOOM</h6>
 
             <div class="navbar">
-                <a href="#">HELLO</a>
-                <div class="dropdown">
-                    <a href="#">HELLO</a>
-                </div>
+                <a href="about.php">ABOUT</a>
+                <?php if ($_SESSION['user_type'] === 'user') { ?>
+                    <div class="dropdown">
+                        <a href="donate.php">DONATE</a>
+                    </div>
+                <?php }  ?>
+                <a href="causes.php">CAUSES</a>
+
             </div>
         </div>
 
