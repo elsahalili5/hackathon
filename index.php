@@ -1,3 +1,4 @@
+<?php require('./disable-warnings.php'); ?>
 <?php session_start(); ?>
 
 <!DOCTYPE html>

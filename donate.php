@@ -3,11 +3,11 @@
 session_start();
 require 'config.php';
 
-$id = $_GET['id'];
-$stmt = $conn->prepare("SELECT * FROM users WHERE name=:name");
-$stmt->bindParam(":name", $name);
-$stmt->execute();
-$user = $stmt->fetch();
+    $id = $_GET['id'];
+    $stmt = $conn->prepare("SELECT * FROM users WHERE name=:name");
+    $stmt->bindParam(":name", $name);
+    $stmt->execute();
+    $user = $stmt->fetch();
 
 
 try {
