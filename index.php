@@ -32,7 +32,7 @@
         </div>
 
         <div class="section-1-text">
-            <h6>HELLO</h6>
+            <h6 class="title">TREE BLOOM</h6>
 
             <div class="navbar">
                 <a href="#">HELLO</a>
