@@ -16,7 +16,7 @@
     <div class="section-1">
         <div class="video">
             <video autoplay loop muted class="backgroundvideo">
-                <source src=".\videos\earth_spinning.mp4" type="video/mp4">
+                <source src=".\videos\video (2160p).mp4" type="video/mp4">
             </video>
         </div>
 
