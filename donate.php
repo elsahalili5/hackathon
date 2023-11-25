@@ -60,7 +60,7 @@ try {
             </form>
         </DIV>
         <div>
-            <form class="second-form">
+            <form class="second-form" action="donate-logic.php" method="POST">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label" value="<?php echo $user['name'] ?>">Name</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

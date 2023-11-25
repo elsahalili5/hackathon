@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Admin</title>
+    <title>Add New User</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <div class="form-container sign-up-container">
             <form action="addadminlogic.php" method="POST">
 
-                <h1>Add New Admin</h1>
+                <h1>Add New User</h1>
 
                 <input type="text" name="name" placeholder="Name" required />
                 <input type="text" name="surname" placeholder="Surname" required />
