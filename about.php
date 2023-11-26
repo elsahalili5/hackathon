@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,38 +10,43 @@
 
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-
+    <link rel="stylesheet" href="styles/about.css">
 </head>
 
-<body>
-    <div>
+<body class="about-body">
+    <div class="about-container">
         <header>
             <div class="logo">
-                <h1>ECO FUND</h1>
+                <img src="./images/logo.png" alt="EcoFund logo">
             </div>
             <nav class="navbar">
                 <a href="./index.php">Home</a>
+                <a href="./about.php" class="active">Our Mission</a>
                 <a href="./donate.php">Donate</a>
-                <a href="./causes.php">Causes</a>
+                <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                    <a href="./causes.php">Causes</a>
+                <?php }  ?>
             </nav>
         </header>
-     
-       <div class="image-container">
-           <img src="https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
-        
-            <div class="overlay-text">
-                <p>Welcome to our nature-saving initiative! At Echo Fund, we're on a mission to protect and preserve our planet's precious ecosystems through the transformative power of technology. Your donation directly fuels our innovative projects. Join us in making a real impact – every contribution brings us closer to a future where technology not only coexists with nature but actively contributes to its flourishing. Together, let's ensure a greener, more sustainable world for generations to come. Donate today and be a part of the movement to save nature through technology.</p>
+
+        <div class="about-content">
+            <div class="about-video">
+                <div class="video">
+                    <video autoplay loop muted class="backgroundvideo">
+                        <source src=".\videos\about-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>Our mission</h2>
+                <p>Welcome to our nature-saving initiative! At Echo Fund, we're on a mission to protect and preserve our planet's precious ecosystems through the transformative power of technology. </p>
+                <p>Your donation directly fuels our innovative projects. Join us in making a real impact – every contribution brings us closer to a future where technology not only coexists with nature but actively contributes to its flourishing. Together, let's ensure a greener, more sustainable world for generations to come. Donate today and be a part of the movement to save nature through technology.</p>
             </div>
         </div>
-   
-        
-       
-
     </div>
 
-    
     <footer>
-        <p>Copyright Anjesa & Elsa</p>
+        <p>Copyright © 2023 Anjesa & Elsa - All Rights Reserved</p>
     </footer>
 </body>
 

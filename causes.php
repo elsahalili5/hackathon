@@ -1,8 +1,10 @@
+<?php require('page-only-for-admin.php') ?>
+<?php require('is-private-page.php') ?>
+
 <?php
 session_start();
 require 'config.php';
 
-// Fetching causes from the database
 try {
     $stmt = $conn->query("SELECT * FROM cause");
     $stmt->execute();
@@ -33,18 +35,20 @@ try {
 </head>
 
 <body>
-    <div>
-        <header>
-            <div class="logo">
-                <h1>ECO FUND</h1>
-            </div>
-            <nav class="navbar">
-                <a href="./index.php">Home</a>
-                <a href="./about.php">Our Mission</a>
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="EcoFund logo">
+        </div>
 
-            </nav>
-        </header>
-    </div>
+        <nav class="navbar">
+            <a href="./index.php">Home</a>
+            <a href="./about.php">Our Mission</a>
+            <a href="./donate.php">Donate</a>
+            <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                <a href="./causes.php" class="active">Causes</a>
+            <?php }  ?>
+        </nav>
+    </header>
 
     <div class="container">
         <div class="users-table">
@@ -84,9 +88,8 @@ try {
         </div>
     </div>
     <footer>
-        <p>Copyright Anjesa & Elsa</p>
+        <p>Copyright © 2023 Anjesa & Elsa - All Rights Reserved</p>
     </footer>
-
 </body>
 
 </html>

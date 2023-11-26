@@ -3,16 +3,35 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
 
 footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   background-color: #0b2d0e;
+  z-index: 1;
 }
 
 footer p {
   font-size: 14px;
   color: white;
+  margin: 0;
+}
+
+.form-control:focus {
+  border-color: #2e952b;
+  box-shadow: 0 0 0 0.2rem rgba(46, 149, 43, 0.25) !important;
 }

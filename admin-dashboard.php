@@ -35,11 +35,14 @@ try {
 <body>
     <header>
         <div class="logo">
-            <h1>ECO FUND</h1>
+            <img src="./images/logo.png" alt="EcoFund logo">
         </div>
+
         <nav class="navbar">
             <a href="./index.php">Home</a>
-
+            <a href="./about.php">Our Mission</a>
+            <a href="./donate.php" class="active">Donate</a>
+            <a href="./causes.php">Causes</a>
         </nav>
     </header>
     <div class="container">
@@ -84,7 +87,7 @@ try {
         </div>
     </div>
     <footer>
-        <p>Copyright Anjesa & Elsa</p>
+        <p>Copyright © 2023 Anjesa & Elsa - All Rights Reserved</p>
     </footer>
 </body>
 

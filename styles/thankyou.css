@@ -1,0 +1,31 @@
+body.thank-you {
+  background-image: url("https://c0.wallpaperflare.com/preview/562/644/967/flora-nature-shady-cozy.jpg");
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #4caf50;
+}
+
+p {
+  margin-top: 10px;
+}
+
+a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}

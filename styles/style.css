@@ -19,6 +19,10 @@ body {
   text-decoration: none;
 }
 
+.login-wrapper .login-text:hover {
+  color: #2e952b;
+}
+
 .login-wrapper .welcome-text {
   text-transform: capitalize;
 }
@@ -29,6 +33,9 @@ body {
   justify-content: center;
   margin: 2px;
   font-family: Euclid !important;
+}
+.section-1-text {
+  padding: 0 0 10px 0;
 }
 
 .section-1-text h5 {
@@ -44,7 +51,7 @@ body {
 }
 
 .section-1-text:hover {
-  background-color: rgba(226, 216, 216, 0.406) !important;
+  background: rgba(0, 0, 0, 1) !important;
   transition: background-color 0.5s ease-out;
 }
 
@@ -89,11 +96,17 @@ body {
   padding: 10px;
   border: 1px solid white;
 }
+
 .admin-dashboard-btn {
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin: 10px 0;
 }
+
+.admin-dashboard-btn a:hover {
+  background-color: #2e952b !important;
+}
+
 .user-dashboard-btn a {
   text-decoration: none;
   color: white;
@@ -109,4 +122,39 @@ body {
 .logout-btn {
   text-decoration: none;
   color: white;
+}
+
+.logout-btn:hover {
+  text-decoration: none;
+  color: rgb(215, 72, 72);
+}
+
+.mission {
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.mission p {
+  color: #fff;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.mission .user-dashboard-btn {
+  margin-top: 40px;
+}
+
+.mission .user-dashboard-btn a {
+  width: 160px;
+}
+
+.mission .user-dashboard-btn a:hover {
+  background-color: #2e952b;
 }
