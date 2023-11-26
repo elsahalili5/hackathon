@@ -57,7 +57,7 @@ try {
                     <h2>Causes</h2>
                 </div>
                 <div>
-                    <a href="new-cause.php" class="btn btn-secondary"><ion-icon name="add-circle-outline"></ion-icon> <span>Add New Cause</span></a>
+                    <a href="new-cause.php" class="btn btn-secondary d-flex align-items-center"><ion-icon name="add-circle-outline"></ion-icon> <span class="ml-2">Add New Cause</span></a>
                 </div>
             </div>
             <table class="table table-striped">
