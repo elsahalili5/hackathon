@@ -1,6 +1,9 @@
 body {
   background: #d9e8c3;
 }
+.container {
+  margin-bottom: 10%;
+}
 .contact-form {
   background: rgb(0, 0, 0, 0.8);
   border-radius: 15px;
@@ -111,5 +114,8 @@ label {
 }
 
 header {
+  position: relative !important;
+}
+footer {
   position: relative !important;
 }
