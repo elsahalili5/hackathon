@@ -100,7 +100,7 @@ try {
         </div>
     </div>
     <footer>
-        <p>Copyright © 2023 Anjesa & Elsa - All Rights Reserved</p>
+        <p>Copyright © 2023 Anjesa & Elsa & Elmedina- All Rights Reserved</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

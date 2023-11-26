@@ -235,7 +235,7 @@ try {
 
 
     <footer>
-        <p>Copyright © 2023 Anjesa & Elsa - All Rights Reserved</p>
+        <p>Copyright © 2023 Anjesa & Elsa & Elmedina - All Rights Reserved</p>
     </footer>
 </body>
 

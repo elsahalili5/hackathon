@@ -37,7 +37,7 @@
                     <a href="./contact.php">Contact</a>
                 <?php }  ?>
                 <?php if ($_SESSION['user_type'] === 'admin') { ?>
-                    <a href="./contact.php">Messages</a>
+                    <a href="./messages.php">Messages</a>
                 <?php }  ?>
 
             </nav>
@@ -63,7 +63,7 @@
         </div>
 
         <footer>
-            <p>Copyright © 2023 Anjesa & Elsa - All Rights Reserved</p>
+            <p>Copyright © 2023 Anjesa & Elsa & Elmedina - All Rights Reserved</p>
         </footer>
 </body>
 
