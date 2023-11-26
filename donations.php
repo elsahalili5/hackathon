@@ -57,7 +57,7 @@ try {
                 <a href="./contact.php">Contact</a>
             <?php }  ?>
             <?php if ($_SESSION['user_type'] === 'admin') { ?>
-                <a href="./messages.php">Messages</a>
+                <a href="./contact.php">Messages</a>
             <?php }  ?>
 
         </nav>
@@ -83,7 +83,7 @@ try {
                             </div>
                             <div class="card-body">
                                 <h6 class="card-text"><?= $donation['email'] ?></h6>
-                                <p class="card-text text-truncate d-inline-block"><?= $donation['donation_reason'] ?></h6>
+                                <p class="card-text text-truncate d-inline-block"><?= $donation['cause'] ?></h6>
                             </div>
                             <div class="card-footer">
                                 <p class="text-success mb-0 pb-0 font-weight-bold ">
