@@ -55,7 +55,7 @@ try {
                     <h2>User Management</h2>
                 </div>
                 <div>
-                    <a href="add-admin.php" class="btn btn-secondary d-flex align-items-center"><ion-icon name="add-circle-outline"></ion-icon> <span class="ml-2">Add New User</span></a>
+                    <a href="add-user.php" class="btn btn-secondary d-flex align-items-center"><ion-icon name="add-circle-outline"></ion-icon> <span class="ml-2">Add New User</span></a>
                 </div>
             </div>
             <table class="table table-striped">
