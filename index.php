@@ -34,13 +34,10 @@
                             </div>
                     <?php } // No need for an else condition here
                     }  ?>
-
-
                     <a class="logout-btn" href="./logout.php">Logout</a>
                 <?php } else { ?>
                     <a class="login-text" href="login-signin.php">Login or Register</a>
                 <?php } ?>
-
 
             </div>
         </div>
@@ -59,6 +56,11 @@
                 <?php if ($_SESSION['user_type'] === 'admin') { ?>
                     <div class="dropdown">
                         <a href="causes.php">CAUSES</a>
+                    </div>
+                <?php }  ?>
+                <?php if ($_SESSION['user_type'] === 'user') { ?>
+                    <div class="dropdown">
+                        <a href="contact.php">CONTACT</a>
                     </div>
                 <?php }  ?>
 
