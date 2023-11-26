@@ -37,7 +37,7 @@
                     <a href="./contact.php">Contact</a>
                 <?php }  ?>
                 <?php if ($_SESSION['user_type'] === 'admin') { ?>
-                    <a href="./messages.php">Messages</a>
+                    <a href="./contact.php">Messages</a>
                 <?php }  ?>
 
             </nav>
