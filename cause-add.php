@@ -21,15 +21,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 } else {
     echo "Invalid request.";
 }
-
-$causesTotals = []; // Initialize an array to store the total amount collected for each cause
-
-try {
-    $stmt = $conn->query("SELECT cause, SUM(amount) AS total_amount FROM donations GROUP BY cause");
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $causesTotals[$row['cause']] = $row['total_amount'];
-    }
-} catch (PDOException $e) {
-    echo $e;
-    echo 'error';
-}

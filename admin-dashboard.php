@@ -43,8 +43,21 @@ try {
         <nav class="navbar">
             <a href="./index.php">Home</a>
             <a href="./about.php">Our Mission</a>
-            <a href="./donate.php" class="active">Donate</a>
-            <a href="./causes.php">Causes</a>
+            <?php if ($_SESSION['user_type'] === 'user') { ?>
+                <a href="./donate.php">Donate</a>
+            <?php }  ?>
+            <a href="./donations.php">Donations</a>
+
+            <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                <a class="active" href="./causes.php">Causes</a>
+            <?php }  ?>
+            <?php if ($_SESSION['user_type'] === 'user') { ?>
+                <a href="./contact.php">Contact</a>
+            <?php }  ?>
+            <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                <a href="./contact.php">Messages</a>
+            <?php }  ?>
+
         </nav>
     </header>
     <div class="container">

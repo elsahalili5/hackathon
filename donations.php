@@ -3,6 +3,13 @@ session_start();
 require 'config.php';
 
 try {
+    $stmt = $conn->query("SELECT * FROM cause");
+    $stmt->execute();
+    $causes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+try {
     $stmt = $conn->query("SELECT * FROM donations");
     $stmt->execute();
     $donations = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -83,6 +90,8 @@ try {
                             </div>
                             <div class="card-body">
                                 <h6 class="card-text"><?= $donation['email'] ?></h6>
+                                <p class="card-text text-truncate d-inline-block"><?= $donation['donation_reason'] ?></h6>
+
                                 <p class="card-text text-truncate d-inline-block"><?= $donation['cause'] ?></h6>
                             </div>
                             <div class="card-footer">
