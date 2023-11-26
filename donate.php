@@ -64,7 +64,7 @@ try {
             <h6> Your decision to contribute is not just a donation; it's a powerful statement of commitment to a sustainable future.</h6>
             <h6> As you embark on this journey with us, your support is a catalyst for positive change, helping preserve oceans, mountains, and vital environments. Your click today is an investment in a greener, healthier tomorrow. We are grateful for your generosity and dedication to creating a lasting impact. Together, let's shape a world where every act of kindness contributes to the well-being of our planet. Thank you for being a force for good
             </h6>
-            <a href="donations.php" class="text-success">See Donations</a>
+            <a href="donations.php" class="btn btn-success">See Donations</a>
         </div>
         <div class="donate-right">
 
