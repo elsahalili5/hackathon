@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You for Your Donation</title>
+    <title>ECO FUND | Thank You for Your Donation</title>
     <link rel="stylesheet" href="./styles/thankyou.css">
+
+    <link rel="icon" type="image/x-icon" href="./images/logo-dark.png">
+
 
 </head>
 

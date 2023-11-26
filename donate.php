@@ -1,3 +1,5 @@
+<?php require('is-private-page.php') ?>
+
 <?php
 session_start();
 require 'config.php';
@@ -22,7 +24,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate</title>
+    <title>ECO FUND | Donate</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -33,6 +35,7 @@ try {
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/donate.css">
+    <link rel="icon" type="image/x-icon" href="./images/logo-dark.png">
 
 </head>
 
@@ -61,6 +64,7 @@ try {
             <h6> Your decision to contribute is not just a donation; it's a powerful statement of commitment to a sustainable future.</h6>
             <h6> As you embark on this journey with us, your support is a catalyst for positive change, helping preserve oceans, mountains, and vital environments. Your click today is an investment in a greener, healthier tomorrow. We are grateful for your generosity and dedication to creating a lasting impact. Together, let's shape a world where every act of kindness contributes to the well-being of our planet. Thank you for being a force for good
             </h6>
+            <a href="donations.php" class="text-success">See Donations</a>
         </div>
         <div class="donate-right">
 

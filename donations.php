@@ -1,14 +1,11 @@
-<?php require('page-only-for-admin.php') ?>
-<?php require('is-private-page.php') ?>
-
 <?php
 session_start();
 require 'config.php';
 
 try {
-    $stmt = $conn->query("SELECT * FROM cause");
+    $stmt = $conn->query("SELECT * FROM donations");
     $stmt->execute();
-    $causes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $donations = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
@@ -21,7 +18,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECO FUND | Causes's Dashboard</title>
+    <title>ECO FUND | Donations</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -31,6 +28,8 @@ try {
     <link rel="stylesheet" href="styles/admin-dashboard.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/donations.css">
+
 
     <link rel="icon" type="image/x-icon" href="./images/logo-dark.png">
 
@@ -46,50 +45,52 @@ try {
         <nav class="navbar">
             <a href="./index.php">Home</a>
             <a href="./about.php">Our Mission</a>
-            <a href="./donate.php">Donate</a>
+            <a href="./donate.php" class="active">Donate</a>
             <?php if ($_SESSION['user_type'] === 'admin') { ?>
-                <a href="./causes.php" class="active">Causes</a>
+                <a href="./causes.php">Causes</a>
             <?php }  ?>
         </nav>
     </header>
-
-    <div class="container">
+    <div class="donations-container">
         <div class="users-table">
             <div class="table-head">
                 <div>
-                    <h2>Causes</h2>
+                    <h2>All Donations</h2>
                 </div>
                 <div>
-                    <a href="new-cause.php" class="btn btn-secondary d-flex align-items-center"><ion-icon name="add-circle-outline"></ion-icon> <span class="ml-2">Add New Cause</span></a>
+                    <a href="donate.php" class="btn btn-secondary d-flex align-items-center"> <span class="mr-2">Donate</span> <ion-icon name="arrow-forward-outline"></ion-icon> </a>
                 </div>
             </div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (isset($causes) && !empty($causes)) : ?>
-                        <?php foreach ($causes as $cause) : ?>
-                            <tr>
-                                <th scope="row"><?= $cause['id'] ?></th>
-                                <td><?= $cause['name'] ?></td>
-                                <td>
-                                    <a class="delete-btn" href="delete-cause.php?id=<?= $cause['id'] ?>"><ion-icon name="trash-outline"></ion-icon></a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    <?php else : ?>
-                        <tr>
-                            <td colspan="3">No causes found</td>
-                        </tr>
-                    <?php endif; ?>
-                </tbody>
-            </table>
+
+            <div class="cards">
+                <?php if (isset($donations) && !empty($donations)) : ?>
+                    <?php foreach ($donations as $donation) : ?>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title text-uppercase "><?= $donation['first_name'] ?> <?= $donation['last_name'] ?></h4>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-text"><?= $donation['email'] ?></h6>
+                                <p class="card-text text-truncate d-inline-block"><?= $donation['donation_reason'] ?></h6>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-success mb-0 pb-0 font-weight-bold ">
+                                    <?= $donation['amount'] ?> $
+                                </p>
+                            </div>
+                        </div>
+
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <div>
+                        <p>No causes found</p>
+                    </div>
+                <?php endif; ?>
+            </div>
+
         </div>
     </div>
+
     <footer>
         <p>Copyright © 2023 Anjesa & Elsa - All Rights Reserved</p>
     </footer>

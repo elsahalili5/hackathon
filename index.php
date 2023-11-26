@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoFund</title>
+    <title>ECO FUND | Homepage</title>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -50,6 +50,7 @@
 
             <div class="navbar">
                 <a href="about.php">OUR MISSION</a>
+                <a href="donations.php">DONATIONS</a>
                 <?php if ($_SESSION['user_type'] === 'user') { ?>
                     <div class="dropdown">
                         <a href="donate.php">DONATE</a>

@@ -1,0 +1,18 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.card {
+  flex-basis: 360px;
+}
+
+.card .text-truncate {
+  max-width: calc(100% - 20px);
+}
+
+.donations-container {
+  padding: 50px 20px 20px 20px;
+}

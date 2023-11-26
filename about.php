@@ -6,11 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ECO FUND | Our Mission</title>
 
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/about.css">
+    <link rel="icon" type="image/x-icon" href="./images/logo-dark.png">
+
 </head>
 
 <body class="about-body">
