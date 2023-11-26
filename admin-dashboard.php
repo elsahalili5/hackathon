@@ -29,9 +29,19 @@ try {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/admin-dashboard.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+            <h1>ECO FUND</h1>
+        </div>
+        <nav class="navbar">
+            <a href="./index.php">Home</a>
+
+        </nav>
+    </header>
     <div class="container">
 
         <div class="users-table">
@@ -73,6 +83,9 @@ try {
             </table>
         </div>
     </div>
+    <footer>
+        <p>Copyright Anjesa & Elsa</p>
+    </footer>
 </body>
 
 </html>

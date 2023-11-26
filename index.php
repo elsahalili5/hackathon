@@ -11,13 +11,17 @@
 
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+
 </head>
 
 <body>
+
     <div class="section-1">
         <div class="video">
             <video autoplay loop muted class="backgroundvideo">
                 <source src=".\videos\video (2160p).mp4" type="video/mp4">
+
             </video>
         </div>
 
@@ -36,22 +40,36 @@
             <h5 class="title">ECO FUND</h5>
 
             <div class="navbar">
-                <a href="about.php">ABOUT</a>
+                <a href="about.php">OUR MISSION</a>
                 <?php if ($_SESSION['user_type'] === 'user') { ?>
                     <div class="dropdown">
                         <a href="donate.php">DONATE</a>
                     </div>
                 <?php }  ?>
-                <a href="causes.php">CAUSES</a>
+                <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                    <div class="dropdown">
+                        <a href="causes.php">CAUSES</a>
+                    </div>
+                <?php }  ?>
 
             </div>
         </div>
 
-        <?php if ($_SESSION['user_type'] === 'admin') { ?>
-            <div class="admin-dashboard-btn">
-                <a href="admin-dashboard.php">Admin's Dashboard</a>
+        <?php if (isset($_SESSION['user_type'])) {
+            if ($_SESSION['user_type'] === 'admin') { ?>
+                <div class="admin-dashboard-btn">
+                    <a href="admin-dashboard.php">Admin's Dashboard</a>
+                </div>
+            <?php } // No need for an else condition here
+        } else { ?>
+            <div class="user-dashboard-btn">
+                <a href="login-signin.php">Sign up to donate</a>
             </div>
-        <?php }  ?>
+        <?php } ?>
+
+
+
+
 
     </div>
 

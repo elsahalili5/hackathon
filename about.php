@@ -7,7 +7,8 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/header.css">
+
 </head>
 
 <body>

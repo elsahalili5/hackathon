@@ -1,7 +1,4 @@
-<?php require('page-only-for-admin.php') ?>
-<?php require('is-private-page.php') ?>
-
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -52,4 +49,4 @@
 
 </body>
 
-</html>
+</html> -->

@@ -30,64 +30,59 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/donate.css">
-    <link rel="stylesheet" href="styles/donate.css">
+    <link rel="stylesheet" href="styles/header.css">
 </head>
-<div class="container2">
-    <div class="left-container">
-
-    </div>
-
-    <div class="right-container">
-        <img src="" alt="">
-        <DIV class="card-div">
-            <div class="card-image">
-                <img width="200px" src="https://static.vecteezy.com/system/resources/previews/008/490/560/original/credit-card-transparent-background-png.png" alt="">
-            </div>
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">CARD NUMBER</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">NAME</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="date" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">MM/YY</label>
-                </div>
-                <button type="submit" class="btn btn-primary">PAY NOW</button>
-            </form>
-        </DIV>
-        <div>
-            <form class="second-form" action="donate-logic.php" method="POST">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" value="<?php echo $user['name'] ?>">Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">CAUSE</label>
-                    <select name="cause" id="">
-                        <option value="">Select a cause</option>
-                        <?php foreach ($causes as $cause) : ?>
-                            <option value="<?php echo $cause['id']; ?>"><?php echo $cause['name']; ?></option>
-                        <?php endforeach; ?>
-                    </select>
-
-                </div>
-                <div class="mb-3 form-check">
-                    <label for="exampleInputEmail1" class="form-label">REASON FOR DONATING</label>
-                    <textarea name="donate-reason" id="" cols="30" rows="10" required></textarea>
-
-                </div>
-                <button type="submit" class="btn btn-primary">DONATE</button>
-            </form>
-        </div>
-
-    </div>
-</div>
 
 <body>
+
+    <div>
+        <header>
+            <div class="logo">
+                <h1>ECO FUND</h1>
+            </div>
+            <nav class="navbar">
+                <a href="./index.php">Home</a>
+                <a href="./causes.php">Causes</a>
+            </nav>
+        </header>
+    </div>
+    <div class="container2">
+        <div class="left-container">
+
+        </div>
+
+        <div class="right-container">
+            <div>
+                <form class="second-form" action="donate-logic.php" method="POST">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label" value="<?php echo $user['name'] ?>">Your Name</label>
+                        <input type="text" class="form-control" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">The cause for your donation</label>
+                        <select name="cause" id="">
+                            <option value="">Select a cause</option>
+                            <?php foreach ($causes as $cause) : ?>
+                                <option value="<?php echo $cause['id']; ?>"><?php echo $cause['name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Donation Amount</label>
+                            <input type="text" class="form-control" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label for="exampleInputEmail1" class="form-label">REASON FOR DONATING</label>
+                        <textarea name="donate-reason" id="" cols="30" rows="10" required></textarea>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">DONATE</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
 
 </body>
 
