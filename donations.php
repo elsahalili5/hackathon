@@ -45,12 +45,24 @@ try {
         <nav class="navbar">
             <a href="./index.php">Home</a>
             <a href="./about.php">Our Mission</a>
-            <a href="./donate.php" class="active">Donate</a>
+            <?php if ($_SESSION['user_type'] === 'user') { ?>
+                <a href="./donate.php">Donate</a>
+            <?php }  ?>
+            <a class="active" href="./donations.php">Donations</a>
+
             <?php if ($_SESSION['user_type'] === 'admin') { ?>
                 <a href="./causes.php">Causes</a>
             <?php }  ?>
+            <?php if ($_SESSION['user_type'] === 'user') { ?>
+                <a href="./contact.php">Contact</a>
+            <?php }  ?>
+            <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                <a href="./messages.php">Messages</a>
+            <?php }  ?>
+
         </nav>
     </header>
+
     <div class="donations-container">
         <div class="users-table">
             <div class="table-head">

@@ -12,7 +12,9 @@ try {
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -46,12 +48,24 @@ try {
         <nav class="navbar">
             <a href="./index.php">Home</a>
             <a href="./about.php">Our Mission</a>
-            <a href="./donate.php">Donate</a>
-            <?php if ($_SESSION['user_type'] === 'admin') { ?>
-                <a href="./causes.php" class="active">Causes</a>
+            <?php if ($_SESSION['user_type'] === 'user') { ?>
+                <a href="./donate.php">Donate</a>
             <?php }  ?>
+            <a href="./donations.php">Donations</a>
+
+            <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                <a class="active" href="./causes.php">Causes</a>
+            <?php }  ?>
+            <?php if ($_SESSION['user_type'] === 'user') { ?>
+                <a href="./contact.php">Contact</a>
+            <?php }  ?>
+            <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                <a href="./contact.php">Messages</a>
+            <?php }  ?>
+
         </nav>
     </header>
+
 
     <div class="container">
         <div class="users-table">
@@ -68,7 +82,12 @@ try {
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Total Amount</th>
+                        <th scope="col">Action</th>
+
+
                     </tr>
+
                 </thead>
                 <tbody>
                     <?php if (isset($causes) && !empty($causes)) : ?>
@@ -76,6 +95,8 @@ try {
                             <tr>
                                 <th scope="row"><?= $cause['id'] ?></th>
                                 <td><?= $cause['name'] ?></td>
+
+                                <td><?= isset($causesTotals[$cause['name']]) ? $causesTotals[$cause['name']] : 0 ?></td>
                                 <td>
                                     <a class="delete-btn" href="delete-cause.php?id=<?= $cause['id'] ?>"><ion-icon name="trash-outline"></ion-icon></a>
                                 </td>

@@ -49,18 +49,22 @@
                 <a href="about.php">OUR MISSION</a>
                 <a href="donations.php">DONATIONS</a>
                 <?php if ($_SESSION['user_type'] === 'user') { ?>
-                    <div class="dropdown">
+                    <div class="dropdown ">
                         <a href="donate.php">DONATE</a>
                     </div>
                 <?php }  ?>
                 <?php if ($_SESSION['user_type'] === 'admin') { ?>
-                    <div class="dropdown">
+                    <div class="dropdown ">
                         <a href="causes.php">CAUSES</a>
                     </div>
                 <?php }  ?>
                 <?php if ($_SESSION['user_type'] === 'user') { ?>
                     <div class="dropdown">
                         <a href="contact.php">CONTACT</a>
+                    </div>
+                <?php }  ?> <?php if ($_SESSION['user_type'] === 'admin') { ?>
+                    <div class="dropdown">
+                        <a href="contact.php">MESSAGES</a>
                     </div>
                 <?php }  ?>
 

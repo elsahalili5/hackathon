@@ -28,7 +28,7 @@ body.about-body {
 }
 
 .about-text {
-  padding: 20px;
+  padding: 40px 20px;
   color: white;
   font-size: 20px;
   line-height: 30px;
@@ -38,4 +38,20 @@ body.about-body {
 
 .about-text h2 {
   margin: 0 30px 0 0;
+}
+.donate-btn a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid white;
+}
+
+.donate-btn {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.donate-btn a:hover {
+  background-color: #2e952b !important;
 }
